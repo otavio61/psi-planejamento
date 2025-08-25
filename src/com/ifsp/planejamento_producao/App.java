@@ -1,13 +1,13 @@
 package com.ifsp.planejamento_producao;
 
+import com.ifsp.planejamento_producao.controller.AreaController;
 import com.ifsp.planejamento_producao.model.Area;
-import com.ifsp.planejamento_producao.model.AreaDAO;
 
 public class App {
     public static void main(String[] args) {
         try {
-            AreaDAO areaDAO = new AreaDAO();
-            areaDAO.insert(new Area(
+            AreaController controller = new AreaController();
+            controller.insert(new Area(
                 "para plantar feijão",
                 "feijão",
                 7

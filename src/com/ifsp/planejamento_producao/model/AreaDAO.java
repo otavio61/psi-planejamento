@@ -10,7 +10,7 @@ public class AreaDAO {
         Connection con = null;
         PreparedStatement stt = null;
         ResultSet res = null;
-
+        
         try {
             con = SQL.connect();
             stt = con.prepareStatement(
