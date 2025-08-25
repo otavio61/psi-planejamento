@@ -6,9 +6,12 @@ import com.ifsp.planejamento_producao.model.AreaDAO;
 public class App {
     public static void main(String[] args) {
         try {
-            AreaDAO dao = new AreaDAO();
-            Area a = dao.get(1);
-            System.err.println(a.getNome());
+            AreaDAO areaDAO = new AreaDAO();
+            areaDAO.insert(new Area(
+                "para plantar feijão",
+                "feijão",
+                7
+            ));
 
 
         } catch (Exception e) {

@@ -3,17 +3,36 @@ package com.ifsp.planejamento_producao.model;
 public class Area {
     private int id;
     private String nome, tipoCultura;
-    private double ph;
+    private float ph;
 
     public Area(
         int id, String nome, 
         String tipoCultura,
-        double ph
+        float ph
     ) {
         this.id = id;
         this.nome = nome;
         this.tipoCultura = tipoCultura;
         this.ph = ph;
+    }
+
+    public Area(
+        String nome, 
+        String tipoCultura,
+        float ph
+    ) {
+        this.nome = nome;
+        this.tipoCultura = tipoCultura;
+        this.ph = ph;
+    }
+
+    public Area(
+        String nome, 
+        String tipoCultura
+    ) {
+        this.nome = nome;
+        this.tipoCultura = tipoCultura;
+        this.ph = 7;
     }
 
     public int getId() {
@@ -30,10 +49,10 @@ public class Area {
         this.nome = nome;
     }
 
-    public double getPh() {
+    public float getPh() {
         return ph;
     }
-    public void setPh(double ph) {
+    public void setPh(float ph) {
         this.ph = ph;
     }
 
