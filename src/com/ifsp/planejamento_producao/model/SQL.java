@@ -1,0 +1,15 @@
+package com.ifsp.planejamento_producao.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class SQL {
+    public static final String URL = "jdbc:mysql://localhost:3306/planejamento_producao";
+    public static final String USER = "root";
+    public static final String PSWD = "";
+
+    public static Connection connect() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PSWD);
+    }
+}   
